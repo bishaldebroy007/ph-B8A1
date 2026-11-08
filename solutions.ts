@@ -8,6 +8,10 @@ const multiplyValue = (value: number, multiplier?: number): number => {
 	}
 };
 
+multiplyValue(10);
+multiplyValue(10, 5);
+multiplyValue(7, 0);
+
 // console.log(multiplyValue(5));
 // console.log(multiplyValue(10, 5));
 // console.log(multiplyValue(7, 0));
@@ -15,3 +19,30 @@ const multiplyValue = (value: number, multiplier?: number): number => {
 // ----------------------------------------------------------------------
 
 // PROBLEM 2
+
+type InputType = string | number | boolean;
+type ReturnType = string | number;
+
+const processInput = (input: InputType): ReturnType => {
+	if (typeof input === "string") {
+		return input.trim().toLowerCase();
+	} else if (typeof input === "number") {
+		return input * 10;
+	} else {
+		return input ? "Active" : "Inactive";
+	}
+};
+
+processInput("  TypeScript  ");
+processInput(7);
+processInput(true);
+processInput(false);
+
+// console.log(processInput("  TypeScript  "));
+// console.log(processInput(7));
+// console.log(processInput(true));
+// console.log(processInput(false));
+
+// ----------------------------------------------------------------------
+
+// PROBLEM 3
