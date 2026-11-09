@@ -46,3 +46,16 @@ processInput(false);
 // ----------------------------------------------------------------------
 
 // PROBLEM 3
+
+const formatCoordinate = (coord: readonly [number, number, string]): string => {
+	const [latitude, longitude, locationName] = coord;
+	return `Location: ${locationName} (${latitude}, ${longitude})`;
+};
+
+formatCoordinate([23.81, 90.41, "Dhaka"]);
+
+// console.log(formatCoordinate([23.81, 90.41, "Dhaka"]));
+
+// ----------------------------------------------------------------------
+
+// PROBLEM 4
