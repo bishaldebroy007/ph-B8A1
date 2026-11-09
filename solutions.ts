@@ -69,3 +69,27 @@ concatenateArrays([1, 2], [3, 4], [5]);
 // ------------------------------------------------------
 
 // PROBLEM 5
+
+interface Course {
+	title: string;
+	students: number;
+	isPublished: boolean;
+}
+
+const getPopularCourses = (courses: Course[], minStudents: number): Course[] => {
+	return courses.filter((courses) => courses.isPublished === true && courses.students >= minStudents);
+};
+
+// Input Data
+const courses = [
+	{ title: "TypeScript Mastery", students: 120, isPublished: true },
+	{ title: "Draft Course", students: 200, isPublished: false },
+	{ title: "Basic HTML", students: 45, isPublished: true },
+	{ title: "Next.js Pro", students: 85, isPublished: true },
+];
+
+getPopularCourses(courses, 80);
+
+// ------------------------------------------------------
+
+// PROBLEM 6
