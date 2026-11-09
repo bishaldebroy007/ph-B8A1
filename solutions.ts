@@ -12,12 +12,6 @@ multiplyValue(10);
 multiplyValue(10, 5);
 multiplyValue(7, 0);
 
-// console.log(multiplyValue(5));
-// console.log(multiplyValue(10, 5));
-// console.log(multiplyValue(7, 0));
-
-// ----------------------------------------------------------------------
-
 // PROBLEM 2
 
 type InputType = string | number | boolean;
@@ -38,13 +32,6 @@ processInput(7);
 processInput(true);
 processInput(false);
 
-// console.log(processInput("  TypeScript  "));
-// console.log(processInput(7));
-// console.log(processInput(true));
-// console.log(processInput(false));
-
-// ----------------------------------------------------------------------
-
 // PROBLEM 3
 
 const formatCoordinate = (coord: readonly [number, number, string]): string => {
@@ -54,10 +41,6 @@ const formatCoordinate = (coord: readonly [number, number, string]): string => {
 
 formatCoordinate([23.81, 90.41, "Dhaka"]);
 
-// console.log(formatCoordinate([23.81, 90.41, "Dhaka"]));
-
-// ----------------------------------------------------------------------
-
 // PROBLEM 4
 
 const concatenateArrays = <T>(...array: T[][]): T[] => {
@@ -65,8 +48,6 @@ const concatenateArrays = <T>(...array: T[][]): T[] => {
 };
 
 concatenateArrays([1, 2], [3, 4], [5]);
-
-// ------------------------------------------------------
 
 // PROBLEM 5
 
@@ -90,8 +71,6 @@ const courses = [
 
 getPopularCourses(courses, 80);
 
-// ------------------------------------------------------
-
 // PROBLEM 6
 
 const pluckValues = <T, K extends keyof T>(items: T[], key: K): T[K][] => {
@@ -107,8 +86,6 @@ const users = [
 
 pluckValues(users, "name");
 pluckValues(users, "id");
-
-// ------------------------------------------------------
 
 // PROBLEM 7
 
@@ -145,11 +122,16 @@ manager.getRoleInfo();
 const employee = new Employee("Raj", 6000);
 employee.getDetails();
 
-// console.log(employee.getDetails());
-
-// console.log(manager.getDetails());
-// console.log(manager.getRoleInfo());
-
-// ------------------------------------------------------
-
 // PROBLEM 8
+
+const validateAgeAsync = async (age: number): Promise<string> => {
+	if (age >= 18) {
+		return new Promise((resolve) => {
+			setTimeout(() => {
+				resolve("Access Granted");
+			}, 1000);
+		});
+	} else {
+		throw new Error("Access Denied: Must be 18 or older");
+	}
+};
