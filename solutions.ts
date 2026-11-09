@@ -111,3 +111,45 @@ pluckValues(users, "id");
 // ------------------------------------------------------
 
 // PROBLEM 7
+
+class Employee {
+	constructor(
+		protected name: string,
+		private baseSalary: number,
+	) {}
+
+	getDetails(): string {
+		return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`;
+	}
+}
+
+class Manager extends Employee {
+	constructor(
+		name: string,
+		baseSalary: number,
+		private department: string,
+	) {
+		super(name, baseSalary);
+	}
+
+	getRoleInfo(): string {
+		return `Manager of ${this.department}: ${this.name}`;
+	}
+}
+
+// Input:
+const manager = new Manager("Alice", 50000, "Engineering");
+manager.getDetails();
+manager.getRoleInfo();
+
+const employee = new Employee("Raj", 6000);
+employee.getDetails();
+
+// console.log(employee.getDetails());
+
+// console.log(manager.getDetails());
+// console.log(manager.getRoleInfo());
+
+// ------------------------------------------------------
+
+// PROBLEM 8
