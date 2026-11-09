@@ -59,3 +59,13 @@ formatCoordinate([23.81, 90.41, "Dhaka"]);
 // ----------------------------------------------------------------------
 
 // PROBLEM 4
+
+const concatenateArrays = <T>(...array: T[][]): T[] => {
+	return array.reduce((acc, curr) => acc.concat(curr), []);
+};
+
+concatenateArrays([1, 2], [3, 4], [5]);
+
+// ------------------------------------------------------
+
+// PROBLEM 5
